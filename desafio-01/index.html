@@ -1,39 +1,125 @@
+<!-- Para que serve, o que faz? -->
 <html lang="pt-br">
+<!-- Para que serve, o que faz? -->
 <head>
     <meta charset="UTF-8">
+    <!-- Para que serve, o que faz? -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Para que serve, o que faz? -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Para que serve, o que faz? -->
     <title>Curriculo</title>
+    <!-- 
+        Very good (muito bom)
+        Legal vc ter ido um pouco além já apresentando usando alguns recursos de css. 
+        O modo como vc usou, a tag style dentro do head se chama internal css. 
+        Para ver mais formas de usar css acesse o link: https://www.w3schools.com/css/css_howto.asp
+        
+        Lembrete, geralmente a forma external (externa) é a mais recomendada
+    -->
     <style > 
         .vermelho{color: red;}
     </style>
-    <!--não sei se ficou correto, coloque a tag style para mudar a cor, vi assim na internet,
-    mas não sei se era assim que você queria, usei a class no span para definir a cor, como 
-falei antes, não sei se era pra ser assim.-->
 </head>
 
 <body>
-    <!-- Este é um exemplo de comentários que iremos usar neste exercico  -->
-    <!-- Abaixo temos um escopo da tag section, escreva em um comentário o que voce entende sobre ela, e quando ela deve ser utilizada -->
-     
      <div>
-         <h1>Curriculo vitae</h1>
-         <h2>Rodrigo de Jesus Amarante</h2>
-         Rua: Vanderlino Araujo Rocha, 87 <br> <!--tag usada para quebra de linda.-->
+        <!-- 
+            Medium (mais ou menos)
+
+            Uma coisa pra se ater é o que chamamos de SCOPE (escopo)
+            Basta pensar que escopo é tudo o que estiver dentro de uma tag, 
+            neste caso, dentro da tag div que estamos agora, a tag h1 parece 
+            não fazer parte dela, pois seu escopo é um pouco mair
+
+            A tag h1 geralmente é usada no começo da página, somente uma vez, dai é bom bom deixa-la 
+            fora desta div. 
+         -->
+
+        <h1>Curriculo vitae</h1>
+        
+        <!-- 
+            Bad (RUIM)
+
+            As tags h1 à h6 são cabeçalhos, ou seja, elas orientam uma terminada parte de um contexto, 
+            como o título de um capítulo de um livro. 
+
+            Fazer uma comparação rapida, digamos que precisamos escrever uma receita de bolo, mas antes de escrever 
+            a receita precisamos organizar as ideias para ficar fácil de entender. 
+
+            Daí, qual ser o nome da receita? (Bolo de chocolate da manuzinha, exemplo)
+
+            E o que geralmente tem numa receita? Intredientes, modo de preparo e talvez algumas dicas neh?
+
+            Se pensarmos no escopo html dessa receita ela poderia ficar assim: 
+
+            h1 - Bolo de chocolate da manuzinha
+                h2 - Ingredientes
+                ... Conteúdo de ingredientes
+                h2 - Modo de preparo
+                .... Conteúdo de modo de preparo
+                h2 - Dicas 
+                
+            Consegue entender?
+
+            Dica, utilize um texto descritivo para usar dentro deste h1
+         -->
+        <h2>Rodrigo de Jesus Amarante</h2>
+
+        <!-- 
+            Bad (ruim)
+
+            Textos soltos em html não é alto tão legal, eles podem sofrer alteração de aparência e fica
+            complicado com o código cresce. 
+
+            Deixe sempre um texto dentro de uma tag p
+         -->
+         Rua: Vanderlino Araujo Rocha, 87 <br> <!-- Nice (elgal) - tag usada para quebra de linda.-->
          Cidade: Irecê-Ba <br>
          Cep:44900-000 <br>
+         <!-- 
+            Warning (cuidado)
+            aqui foi a primeira vez que vc usou a tag B 
+            e o uso está correto, e também funciona no navegador, certo?
+
+            O Cuidado aqui fica a carater do significado do texto. 
+            Leia o texto https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/b para entender um pouco mais
+          -->
          Telefone: <b>(74)99946-0693 </b> <br>
         Email: <b> dulagule@gmail.com</b> <br> <!--tag <b> usado para deixa o testo em negrito.-->
      </div>
 
+     <!-- 
+        Very good (Muito bom) - Uso a tag h2 com um texto descritivo e aplicou corretamente o estilo
+        
+        Dica: 
+        aqui vc poderia ter utilizado a class diretamente no h2 pq não existe mais textro dentro dela
+     -->
      <h2> <span class="vermelho">Competências</span></h2>
+     <!-- Nice (legal) -->
      <p>Pontualidade e proatidade, boa comunicação e eficiência ao trabalhar com equipe.</p>
+
+     <!-- Dica: neste cenário vc não precisava usar uma nova div, deixando o texto correr mais solto -->
      <div>
+        <!-- 
+            Very good (Muito bom) - Uso a tag h2 com um texto descritivo e aplicou corretamente o estilo
+            
+            Dica: 
+            aqui vc poderia ter utilizado a class diretamente no h2 pq não existe mais textro dentro dela
+        -->
          <h2> <span class="vermelho">Experiência </span></h2>
-           <h3>Smart Help - Assistência técnica em smartephone - <i>técnico e vendedor</i></h3>
+            <!-- 
+                Good - (bom)
+             -->
+            <h3>Smart Help - Assistência técnica em smartephone - 
+                <!-- Good -->
+                <i>técnico e vendedor</i>
+            </h3>
+            <!-- Bad (ruim) - Texto solto -->
               Periodo: (2015 a 2021) <br>
          
            <h3>Hospital Regional de Irecê - <i>técnico informatica</i></h3>
+            <!-- Bad (ruim) - Texto solto -->
               Periodo: (2013 a 2015 ) <br>
      </div>
 
@@ -46,13 +132,12 @@ falei antes, não sei se era pra ser assim.-->
      <div>
         <h2> <span class="vermelho">Prêmios</span></h2>
           <h3>Barriga de Grande - <i>1° lugar</i></h3>
+
           <ul><!--usada para definir uma lista sem numero de ordem.-->
               <li>Barriga grande</li><!--usada para definir item da lista.-->
               <li>Barriga cabeluda</li>
           </ul>
          
      </div>
-
-         <section></section><!--fiquei sem saber como aplica esse aqui.-->
 </body>
 </html>
